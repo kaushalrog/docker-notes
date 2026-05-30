@@ -1,0 +1,87 @@
+version: '3.8'
+
+# ──────────────────────────────────────────────────────
+#  Full-stack example: Node API + PostgreSQL + Redis
+# ──────────────────────────────────────────────────────
+
+services:
+
+  # ── API Service ──────────────────────────────────────
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.example
+    container_name: myapp-api
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+      - DATABASE_URL=postgresql://${DB_USER}:${DB_PASSWORD}@db:5432/${DB_NAME}
+      - REDIS_URL=redis://redis:6379
+    env_file:
+      - .env
+    volumes:
+      - .:/app
+      - /app/node_modules    # Anonymous volume — preserves container's node_modules
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_started
+    networks:
+      - backend
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:3000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+
+  # ── Database ─────────────────────────────────────────
+  db:
+    image: postgres:15-alpine
+    container_name: myapp-db
+    environment:
+      POSTGRES_USER: ${DB_USER:-admin}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-secret}
+      POSTGRES_DB: ${DB_NAME:-mydb}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./scripts/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    ports:
+      - "5432:5432"          # Remove in production
+    networks:
+      - backend
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER:-admin}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # ── Redis ────────────────────────────────────────────
+  redis:
+    image: redis:7-alpine
+    container_name: myapp-redis
+    command: redis-server --appendonly yes --requirepass ${REDIS_PASSWORD:-redispass}
+    volumes:
+      - redisdata:/data
+    ports:
+      - "6379:6379"          # Remove in production
+    networks:
+      - backend
+    restart: unless-stopped
+
+# ── Named Volumes ─────────────────────────────────────
+volumes:
+  pgdata:
+    driver: local
+  redisdata:
+    driver: local
+
+# ── Networks ──────────────────────────────────────────
+networks:
+  backend:
+    driver: bridge
+    name: myapp-network
