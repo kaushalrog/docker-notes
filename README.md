@@ -30,6 +30,10 @@
 ## 1. What is Docker?
 
 Docker is a tool that allows developers to package an application and everything it needs to run (code, runtime, system tools, libraries) into a single, isolated box called a **Container**. This box can be shipped and run on any computer without changing anything.
+
+   ### 2. What problem does it solve for SkyWatch Ops?
+   It solves the classic "It works on my machine" nightmare. Right now, you are building a massive system with Python, Kafka, and complex AI       libraries. If you try to deploy this to the Azure cloud later, things will break because of different software versions. Docker guarantees      that if your Telemetry Engine runs inside a Docker container on your laptop, it will run exactly the same way on Azure.
+
 ```
 Your App  →  Container  →  Runs anywhere (Dev, Staging, Prod)
 ```
