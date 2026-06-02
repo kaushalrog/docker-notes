@@ -29,8 +29,7 @@
 
 ## 1. What is Docker?
 
-Docker is an **open-source platform** that packages applications and their dependencies into lightweight, portable units called **containers**.
-
+Docker is a tool that allows developers to package an application and everything it needs to run (code, runtime, system tools, libraries) into a single, isolated box called a **Container**. This box can be shipped and run on any computer without changing anything.
 ```
 Your App  →  Container  →  Runs anywhere (Dev, Staging, Prod)
 ```
