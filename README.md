@@ -1,10 +1,10 @@
-hu# 🐳 Docker — Complete Notes
+### Docker — Complete Notes
 
 > A complete reference guide for Docker: concepts, commands, Dockerfiles, Compose, networking, volumes, and best practices.
 
 ---
 
-## 📑 Table of Contents
+## Table of Contents
 
 1. [What is Docker?](#1-what-is-docker)
 2. [Core Concepts](#2-core-concepts)
