@@ -884,16 +884,16 @@ COPY . .
 RUN addgroup -S appgroup && adduser -S appuser -G appgroup
 USER appuser
 
-# ✅ Use COPY over ADD (unless you need tar/URL support)
+# Use COPY over ADD (unless you need tar/URL support)
 COPY . .
 
-# ✅ Use exec form for CMD and ENTRYPOINT
+# Use exec form for CMD and ENTRYPOINT
 CMD ["node", "server.js"]
 
-# ✅ Add HEALTHCHECK
+# Add HEALTHCHECK
 HEALTHCHECK --interval=30s CMD curl -f http://localhost:3000/health
 
-# ✅ Label your images
+# Label your images
 LABEL maintainer="your@email.com"
 LABEL version="1.0.0"
 ```
