@@ -875,12 +875,12 @@ RUN apt-get update && \
     apt-get install -y curl wget && \
     rm -rf /var/lib/apt/lists/*
 
-# ✅ Copy dependency files before source code (cache optimization)
+# Copy dependency files before source code (cache optimization)
 COPY package*.json ./
 RUN npm ci --only=production
 COPY . .
 
-# ✅ Run as non-root user
+# Run as non-root user
 RUN addgroup -S appgroup && adduser -S appuser -G appgroup
 USER appuser
 
@@ -982,7 +982,7 @@ docker image prune                 # Remove dangling images
 
 ---
 
-## 📚 Further Learning
+## Further Learning
 
 - [Official Docker Docs](https://docs.docker.com)
 - [Docker Hub](https://hub.docker.com)
