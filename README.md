@@ -1,4 +1,4 @@
-# 🐳 Docker — Complete Notes
+hu# 🐳 Docker — Complete Notes
 
 > A complete reference guide for Docker: concepts, commands, Dockerfiles, Compose, networking, volumes, and best practices.
 
@@ -865,12 +865,12 @@ docker events --filter container=myapp
 ### Dockerfile Best Practices
 
 ```dockerfile
-# ✅ Use specific base image tags — avoid :latest in production
+# Use specific base image tags — avoid :latest in production
 FROM node:18.19-alpine3.19
 
-# ✅ Use .dockerignore to exclude unnecessary files
+# Use .dockerignore to exclude unnecessary files
 
-# ✅ Combine RUN commands to reduce layers
+# Combine RUN commands to reduce layers
 RUN apt-get update && \
     apt-get install -y curl wget && \
     rm -rf /var/lib/apt/lists/*
