@@ -982,6 +982,15 @@ docker image prune                 # Remove dangling images
 
 ---
 
+## Additional Guides
+
+- [Docker Swarm Guide](DOCKER_SWARM.md)
+- [Docker Registry Guide](DOCKER_REGISTRY.md)
+- [Docker Logging Guide](DOCKER_LOGGING.md)
+- [Docker Context Guide](DOCKER_CONTEXT.md)
+
+---
+
 ## Further Learning
 
 - [Official Docker Docs](https://docs.docker.com)
