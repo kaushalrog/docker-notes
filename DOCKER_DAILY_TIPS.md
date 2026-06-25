@@ -4,3 +4,4 @@
 - Order Dockerfile commands from least to most frequently changed to optimize caching.
 - Use specific tags instead of 'latest' for base images to ensure reproducibility.
 - Run containers as non-root users whenever possible for better security.
+- Use healthchecks in your Dockerfiles to monitor container status.
