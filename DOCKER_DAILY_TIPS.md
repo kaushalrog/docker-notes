@@ -5,3 +5,4 @@
 - Use specific tags instead of 'latest' for base images to ensure reproducibility.
 - Run containers as non-root users whenever possible for better security.
 - Use healthchecks in your Dockerfiles to monitor container status.
+- Use environment variables to configure your applications instead of hardcoding.
