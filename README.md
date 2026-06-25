@@ -984,10 +984,24 @@ docker image prune                 # Remove dangling images
 
 ## Additional Guides
 
-- [Docker Swarm Guide](DOCKER_SWARM.md)
-- [Docker Registry Guide](DOCKER_REGISTRY.md)
-- [Docker Logging Guide](DOCKER_LOGGING.md)
+- [Docker CI/CD Guide](DOCKER_CICD.md)
+- [Docker Commands Reference](DOCKER_COMMANDS.md)
+- [Docker Compose Guide](DOCKER_COMPOSE.md)
 - [Docker Context Guide](DOCKER_CONTEXT.md)
+- [Docker Daily Tips](DOCKER_DAILY_TIPS.md)
+- [Dockerfile Reference](DOCKERFILE_REFERENCE.md)
+- [Dockerfiles By Language](DOCKERFILES_BY_LANGUAGE.md)
+- [Docker Logging Guide](DOCKER_LOGGING.md)
+- [Docker Networking Guide](DOCKER_NETWORKING.md)
+- [Docker Performance Guide](DOCKER_PERFORMANCE.md)
+- [Docker Registry Guide](DOCKER_REGISTRY.md)
+- [Docker Security Guide](DOCKER_SECURITY.md)
+- [Docker Swarm Guide](DOCKER_SWARM.md)
+- [Docker Troubleshooting Guide](DOCKER_TROUBLESHOOTING.md)
+- [Docker Volumes Guide](DOCKER_VOLUMES.md)
+- [Interview Q&A](INTERVIEW_QA.md)
+- [Real World Stacks](REAL_WORLD_STACKS.md)
+- [Upload Guide](UPLOAD_GUIDE.md)
 
 ---
 
