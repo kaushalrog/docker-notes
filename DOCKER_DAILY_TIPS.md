@@ -6,3 +6,4 @@
 - Run containers as non-root users whenever possible for better security.
 - Use healthchecks in your Dockerfiles to monitor container status.
 - Use environment variables to configure your applications instead of hardcoding.
+- Clean up unused resources regularly using 'docker system prune'.
