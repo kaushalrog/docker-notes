@@ -7,3 +7,4 @@
 - Use healthchecks in your Dockerfiles to monitor container status.
 - Use environment variables to configure your applications instead of hardcoding.
 - Clean up unused resources regularly using 'docker system prune'.
+- Scan your images for vulnerabilities before deploying them.
