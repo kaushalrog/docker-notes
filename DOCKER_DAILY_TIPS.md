@@ -9,3 +9,4 @@
 - Clean up unused resources regularly using 'docker system prune'.
 - Scan your images for vulnerabilities before deploying them.
 - Use Docker contexts to easily switch between different Docker environments and remote hosts.
+- Enable BuildKit for faster builds, better caching, and concurrent build steps.
