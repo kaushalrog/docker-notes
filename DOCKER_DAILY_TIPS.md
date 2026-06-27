@@ -12,3 +12,4 @@
 - Enable BuildKit for faster builds, better caching, and concurrent build steps.
 - Use the --init flag or a tool like tini in containers to handle zombie processes properly.
 - Limit container capabilities by dropping them and adding only what is necessary (e.g., --cap-drop=ALL).
+- When debugging, use 'docker exec -it <container> /bin/sh' to open an interactive shell inside a running container.
