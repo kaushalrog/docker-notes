@@ -11,3 +11,4 @@
 - Use Docker contexts to easily switch between different Docker environments and remote hosts.
 - Enable BuildKit for faster builds, better caching, and concurrent build steps.
 - Use the --init flag or a tool like tini in containers to handle zombie processes properly.
+- Limit container capabilities by dropping them and adding only what is necessary (e.g., --cap-drop=ALL).
