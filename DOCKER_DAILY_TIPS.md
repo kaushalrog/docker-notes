@@ -8,3 +8,4 @@
 - Use environment variables to configure your applications instead of hardcoding.
 - Clean up unused resources regularly using 'docker system prune'.
 - Scan your images for vulnerabilities before deploying them.
+- Use Docker contexts to easily switch between different Docker environments and remote hosts.
