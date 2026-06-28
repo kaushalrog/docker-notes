@@ -13,3 +13,4 @@
 - Use the --init flag or a tool like tini in containers to handle zombie processes properly.
 - Limit container capabilities by dropping them and adding only what is necessary (e.g., --cap-drop=ALL).
 - When debugging, use 'docker exec -it <container> /bin/sh' to open an interactive shell inside a running container.
+- Use 'docker compose config' to validate your Compose file syntax before running it.
