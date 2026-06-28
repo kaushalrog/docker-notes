@@ -15,3 +15,4 @@
 - When debugging, use 'docker exec -it <container> /bin/sh' to open an interactive shell inside a running container.
 - Use 'docker compose config' to validate your Compose file syntax before running it.
 - Use 'docker inspect <container> | grep IPAddress' to quickly find a container's internal IP.
+- You can pause running containers using 'docker pause' to free up CPU without destroying state.
