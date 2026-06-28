@@ -16,3 +16,4 @@
 - Use 'docker compose config' to validate your Compose file syntax before running it.
 - Use 'docker inspect <container> | grep IPAddress' to quickly find a container's internal IP.
 - You can pause running containers using 'docker pause' to free up CPU without destroying state.
+- Set up a private registry using the official 'registry' image to speed up image distribution in your local network.
