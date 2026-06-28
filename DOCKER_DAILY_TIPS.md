@@ -14,3 +14,4 @@
 - Limit container capabilities by dropping them and adding only what is necessary (e.g., --cap-drop=ALL).
 - When debugging, use 'docker exec -it <container> /bin/sh' to open an interactive shell inside a running container.
 - Use 'docker compose config' to validate your Compose file syntax before running it.
+- Use 'docker inspect <container> | grep IPAddress' to quickly find a container's internal IP.
