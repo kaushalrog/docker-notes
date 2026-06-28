@@ -18,3 +18,4 @@
 - You can pause running containers using 'docker pause' to free up CPU without destroying state.
 - Set up a private registry using the official 'registry' image to speed up image distribution in your local network.
 - Use the 'docker container cp' command to copy files between your host and a running container.
+- Leverage 'docker builder prune' to clear up build cache safely and free up disk space.
