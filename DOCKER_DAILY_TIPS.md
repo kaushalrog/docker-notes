@@ -23,3 +23,4 @@
 - Run 'docker events' to monitor real-time events on the Docker daemon such as container start, stop, and destroy.
 - Always tag your custom images with a meaningful version or hash instead of relying on the 'latest' tag, which can be easily overwritten.
 - Use 'docker cp' to copy files out of a stopped container to inspect its state after a crash.
+- You can limit the number of container restarts by using '--restart=on-failure:5' instead of an unbounded restart loop.
