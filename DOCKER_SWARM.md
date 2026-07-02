@@ -44,3 +44,11 @@ docker service ps helloworld
 ```bash
 docker service scale helloworld=5
 ```
+
+## Docker Stacks
+
+You can use a `docker-compose.yml` file to deploy a stack to a swarm:
+
+```bash
+docker stack deploy -c docker-compose.yml mystack
+```
