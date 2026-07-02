@@ -34,3 +34,19 @@ docker pull localhost:5000/my-image
 ```bash
 docker container stop registry && docker container rm -v registry
 ```
+
+## Authentication
+
+To secure a registry with basic authentication, create an htpasswd file and start the registry with auth environment variables:
+
+```bash
+docker run -d \
+  -p 5000:5000 \
+  --restart=always \
+  --name registry \
+  -v "$(pwd)"/auth:/auth \
+  -e "REGISTRY_AUTH=htpasswd" \
+  -e "REGISTRY_AUTH_HTPASSWD_REALM=Registry Realm" \
+  -e REGISTRY_AUTH_HTPASSWD_PATH=/auth/htpasswd \
+  registry:2
+```
