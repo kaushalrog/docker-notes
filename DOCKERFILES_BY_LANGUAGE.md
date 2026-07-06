@@ -397,3 +397,14 @@ COPY redis.conf /usr/local/etc/redis/redis.conf
 CMD ["redis-server", "/usr/local/etc/redis/redis.conf"]
 EXPOSE 6379
 ```
+
+## MongoDB (Custom)
+
+```dockerfile
+FROM mongo:6
+ENV MONGO_INITDB_ROOT_USERNAME=admin
+ENV MONGO_INITDB_ROOT_PASSWORD=password
+ENV MONGO_INITDB_DATABASE=mydb
+COPY ./init-mongo.js /docker-entrypoint-initdb.d/
+EXPOSE 27017
+```
