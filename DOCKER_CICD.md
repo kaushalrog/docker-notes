@@ -403,5 +403,6 @@ nginx -s reload
 
 # Remove old version
 docker rm -f "myapp-$CURRENT"
+docker image prune -f
 echo "✅ Switched to $NEW"
 ```
