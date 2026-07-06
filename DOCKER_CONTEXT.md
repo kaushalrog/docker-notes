@@ -35,3 +35,9 @@ docker context update remote-server --description "My Remote Server Environment"
 ```bash
 docker context rm remote-server
 ```
+
+### Environment Variable
+You can also use the `DOCKER_CONTEXT` environment variable to override the current context temporarily:
+```bash
+DOCKER_CONTEXT=remote-server docker ps
+```
