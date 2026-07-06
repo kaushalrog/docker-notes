@@ -52,3 +52,8 @@ You can use a `docker-compose.yml` file to deploy a stack to a swarm:
 ```bash
 docker stack deploy -c docker-compose.yml mystack
 ```
+
+### Remove a Stack
+```bash
+docker stack rm mystack
+```
