@@ -49,3 +49,15 @@ Tail the last N lines:
 ```bash
 docker logs --tail 100 <CONTAINER_ID_OR_NAME>
 ```
+
+## Log Rotation
+To prevent logs from consuming all disk space, configure log rotation:
+```json
+{
+  "log-driver": "json-file",
+  "log-opts": {
+    "max-size": "10m",
+    "max-file": "3"
+  }
+}
+```
