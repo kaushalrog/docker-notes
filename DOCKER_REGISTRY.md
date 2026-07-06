@@ -50,3 +50,8 @@ docker run -d \
   -e REGISTRY_AUTH_HTPASSWD_PATH=/auth/htpasswd \
   registry:2
 ```
+
+### Logging into a Registry
+```bash
+docker login my-private-registry.com
+```
