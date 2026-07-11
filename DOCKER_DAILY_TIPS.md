@@ -27,3 +27,4 @@
 - Use 'docker diff' to track changes to a container's filesystem compared to its base image.
 - Use 'docker logs --timestamps' to see when logs were generated.
 - Use 'docker wait' to block until a container stops, then print its exit code.
+- Use 'docker commit' to create a new image from a container's changes (useful for debugging, but not for production images).
