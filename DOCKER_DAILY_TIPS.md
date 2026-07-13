@@ -31,3 +31,4 @@
 - Use 'docker save' and 'docker load' to transfer images between air-gapped systems as tarballs.
 - You can extract artifacts from a specific stage in a multi-stage build using 'docker build --target <stage-name> -o <out-dir> .'.
 - Use 'docker history <image>' to see how an image was built, layer by layer, and how much space each layer takes.
+- Use 'docker stats' to view live resource usage metrics (CPU, Memory, Network I/O) of all your running containers.
