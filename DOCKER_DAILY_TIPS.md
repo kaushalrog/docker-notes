@@ -30,3 +30,4 @@
 - Use 'docker commit' to create a new image from a container's changes (useful for debugging, but not for production images).
 - Use 'docker save' and 'docker load' to transfer images between air-gapped systems as tarballs.
 - You can extract artifacts from a specific stage in a multi-stage build using 'docker build --target <stage-name> -o <out-dir> .'.
+- Use 'docker history <image>' to see how an image was built, layer by layer, and how much space each layer takes.
