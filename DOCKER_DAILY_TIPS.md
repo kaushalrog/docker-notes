@@ -35,3 +35,4 @@
 - Use 'docker system df' to easily see how much disk space is being used by images, containers, and volumes.
 - Note that 'docker compose' (V2) is the recommended standard over the older 'docker-compose' (V1) binary.
 - Use 'docker stop $(docker ps -a -q)' to quickly stop all running containers.
+- When you need root access to a container, use 'docker exec -u 0 -it <container> /bin/sh'.
