@@ -36,3 +36,4 @@
 - Note that 'docker compose' (V2) is the recommended standard over the older 'docker-compose' (V1) binary.
 - Use 'docker stop $(docker ps -a -q)' to quickly stop all running containers.
 - When you need root access to a container, use 'docker exec -u 0 -it <container> /bin/sh'.
+- Use 'docker rename <old_name> <new_name>' to rename a container without having to recreate it.
