@@ -33,3 +33,4 @@
 - Use 'docker history <image>' to see how an image was built, layer by layer, and how much space each layer takes.
 - Use 'docker stats' to view live resource usage metrics (CPU, Memory, Network I/O) of all your running containers.
 - Use 'docker system df' to easily see how much disk space is being used by images, containers, and volumes.
+- Note that 'docker compose' (V2) is the recommended standard over the older 'docker-compose' (V1) binary.
